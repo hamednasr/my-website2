@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { AppWrap } from "../../wrapper/index.js";
+import { urlFor, client } from "../../client.js";
 
-// import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
-// import images from "../../constants";
-import { urlFor, client } from "../../client";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -48,7 +47,7 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, "about");
 
 // export default AppWrap(
 //   MotionWrap(About, "app__about"),
