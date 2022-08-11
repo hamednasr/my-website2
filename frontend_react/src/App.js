@@ -7,7 +7,7 @@ import {
   Skills,
   Publications,
   Testimonial,
-  Work,
+  Projects,
 } from "./container";
 import { Navbar } from "./components";
 import "./App.scss";
@@ -18,7 +18,7 @@ const App = () => {
       <Navbar />
       <Header />
       <About />
-      <Work />
+      <Projects />
       <Skills />
       <Publications />
       <Testimonial />

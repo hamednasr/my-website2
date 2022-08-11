@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
-import "./Work.scss";
+import "./Projects.scss";
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -13,7 +13,7 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    const query = '*[_type == "projects"]';
 
     client.fetch(query).then((data) => {
       setWorks(data);
@@ -39,23 +39,27 @@ const Work = () => {
   return (
     <>
       <h2 className="head-text">
-        My Creative <span>Portfolio</span> Section
+        <p>Project Portfolio</p>
       </h2>
 
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {[
+          "Bl",
+          "Deep Learning",
+          "Machine Learning",
+          "Data Analysis",
+          "All",
+        ].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </div>
 
       <motion.div
@@ -107,7 +111,7 @@ const Work = () => {
               </p>
 
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0]}</p>
+                <p className="p-text">{work.tags}</p>
               </div>
             </div>
           </div>

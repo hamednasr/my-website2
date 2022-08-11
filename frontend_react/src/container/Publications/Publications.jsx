@@ -26,7 +26,7 @@ const Publications = () => {
         <motion.div className="app__skills-exp-item">
           <div>
             <p>
-              <span className="p-text2">{publication.authors} : </span>
+              <span className="p-text2">{publication.authors}</span>
               <span className="p-text2">{publication.title}</span>
               <span className="p-text3">{publication.journal}</span>
             </p>
