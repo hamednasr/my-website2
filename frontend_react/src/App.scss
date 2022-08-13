@@ -52,7 +52,7 @@
 }
 
 .head-text {
-  font-size: 2.75rem;
+  font-size: 2.4rem;
   font-weight: 800;
   text-align: center;
   color: var(--black-color);
@@ -74,6 +74,17 @@
 .p-text {
   font-size: 0.9rem;
   text-align: left;
+  color: var(--gray-color);
+  line-height: 1.5;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+}
+.p-text1 {
+  font-size: 1.1rem;
+  text-align: justify;
+  text-justify: inter-word;
   color: var(--gray-color);
   line-height: 1.5;
 
@@ -107,10 +118,10 @@
 }
 
 .bold-text {
-  font-size: 1rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: var(--black-color);
-  text-align: left;
+  text-align: center;
 
   @media screen and (min-width: 2000px) {
     font-size: 2rem;

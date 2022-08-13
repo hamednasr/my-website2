@@ -35,13 +35,19 @@ const Header = () => (
         <div className="tag-cmp app__flex">
           <ul>
             <li>
-              <h3>PhD Candidate</h3>
+              <h3>PhD Candidate in Project Management</h3>
             </li>
+            <br />
             <li>
-              <h3>Blockchain Developer</h3>
+              <h3>Blockchain, Smart Contract Developer</h3>
             </li>
+            <br />
             <li>
               <h3>Machine learning and Deep learning practitioner</h3>
+            </li>
+            <br />
+            <li>
+              <h3>Data Analyst</h3>
             </li>
           </ul>
         </div>

@@ -20,8 +20,9 @@ const About = () => {
     <>
       <h2 className="head-text">
         I am <span>Deep Learning-Machine Learning</span> Practitioner
+        <br />,<span>Blockchain, Smart Contract </span> Developer
         <br />
-        And, <span>Blockchain Developer</span>
+        And, <span>Data Analyst</span>
       </h2>
 
       <div className="app__profiles">
@@ -37,7 +38,8 @@ const About = () => {
             <h2 className="bold-text" style={{ marginTop: 20 }}>
               {about.title}
             </h2>
-            <p className="p-text" style={{ marginTop: 10 }}>
+            <br />
+            <p className="p-text1" style={{ marginTop: 10 }}>
               {about.description}
             </p>
           </motion.div>
