@@ -3,7 +3,7 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { urlFor, client } from "../../client";
+import { urlFor, client } from "../../client.js";
 import "./Projects.scss";
 
 const Work = () => {
@@ -13,7 +13,7 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   useEffect(() => {
-    const query = '*[_type == "projects"]';
+    const query = '*[_type == "projects"] | order(_updatedAt desc)';
 
     client.fetch(query).then((data) => {
       setWorks(data);
@@ -38,16 +38,16 @@ const Work = () => {
 
   return (
     <>
-      <h2 className="head-text">
-        <p>Project Portfolio</p>
-      </h2>
+      <h2 className="head-text">Project Portfolio</h2>
 
       <div className="app__work-filter">
         {[
-          "Bl",
-          "Deep Learning",
-          "Machine Learning",
+          "Computer Vision",
+          "NLP",
+          "Regression/Time series",
+          "Other DL-ML Models",
           "Data Analysis",
+          "Blockchain/Smart Contract",
           "All",
         ].map((item, index) => (
           <div
@@ -61,7 +61,7 @@ const Work = () => {
           </div>
         ))}
       </div>
-
+      <p className="p-text2">hover over and click to view code</p>
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
@@ -111,7 +111,7 @@ const Work = () => {
               </p>
 
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags}</p>
+                <p className="p-text">{work.tags[0]}</p>
               </div>
             </div>
           </div>
@@ -123,6 +123,6 @@ const Work = () => {
 
 export default AppWrap(
   MotionWrap(Work, "app__works"),
-  "work",
+  "projects",
   "app__primarybg"
 );

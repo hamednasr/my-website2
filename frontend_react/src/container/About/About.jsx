@@ -19,8 +19,9 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I am <span>Deep Learning-Machine Learning</span> Practitioner
-        <br />,<span>Blockchain, Smart Contract </span> Developer
+        I am <span>Deep Learning-Machine Learning</span> Engineer,
+        <br />
+        <span>Blockchain, Solidity, Smart Contract </span> Developer
         <br />
         And, <span>Data Analyst</span>
       </h2>

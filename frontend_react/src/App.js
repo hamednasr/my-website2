@@ -5,6 +5,7 @@ import {
   Footer,
   Header,
   Skills,
+  Education,
   Publications,
   Testimonial,
   Projects,
@@ -20,8 +21,9 @@ const App = () => {
       <About />
       <Projects />
       <Skills />
+      <Education />
       <Publications />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <Footer />
     </div>
   );

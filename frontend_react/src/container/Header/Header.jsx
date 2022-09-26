@@ -35,15 +35,20 @@ const Header = () => (
         <div className="tag-cmp app__flex">
           <ul>
             <li>
-              <h3>PhD Candidate in Project Management</h3>
+              <h3 align="left">
+                With a strong mathematical background, I am a creative and
+                insightful deep learning and machine learning practitioner with
+                experience in different projects and problems using TensorFlow,
+                PyTorch, Scikit-learn, Pandas, etc.{" "}
+              </h3>
             </li>
             <br />
             <li>
-              <h3>Blockchain, Smart Contract Developer</h3>
+              <h3>Deep Learning and Machine Learning Engineer</h3>
             </li>
             <br />
             <li>
-              <h3>Machine learning and Deep learning practitioner</h3>
+              <h3>Blockchain, Solidity and Smart Contract Developer</h3>
             </li>
             <br />
             <li>

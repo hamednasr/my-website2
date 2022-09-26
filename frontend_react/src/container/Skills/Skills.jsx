@@ -11,8 +11,8 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "experiences"]';
-    const skillsQuery = '*[_type == "skills"]';
+    const query = '*[_type == "experiences"] | order(_updatedAt desc)';
+    const skillsQuery = '*[_type == "skills"] | order(_updatedAt desc)';
 
     client.fetch(query).then((data) => {
       setExperiences(data);
@@ -25,7 +25,7 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text">Areas of Expertise and Skills</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -42,11 +42,11 @@ const Skills = () => {
               >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-              <p className="p-text">{skill.name}</p>
+              <p className="p-text2">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
-        <div className="app__skills-exp">
+        {/* <div className="app__skills-exp">
           {experiences.map((experience) => (
             <motion.div className="app__skills-exp-item" key={experience.year}>
               <div className="app__skills-exp-year">
@@ -79,7 +79,7 @@ const Skills = () => {
               </motion.div>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -132,6 +132,21 @@
   }
 }
 
+.bold-text2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--black-color);
+  text-align: right;
+
+  @media screen and (min-width: 2000px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.9rem;
+  }
+}
+
 .app__social {
   display: flex;
   justify-content: center;

@@ -10,7 +10,7 @@ const Publications = () => {
   const [publications, setPublications] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "publications"]';
+    const query = '*[_type == "publications"] | order(_updatedAt desc)';
 
     client.fetch(query).then((data) => {
       setPublications(data);
@@ -40,6 +40,6 @@ const Publications = () => {
 
 export default AppWrap(
   MotionWrap(Publications, "app__skills"),
-  "Publications",
+  "publications",
   "app__whitebg"
 );
